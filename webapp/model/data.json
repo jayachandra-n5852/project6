@@ -1,0 +1,7 @@
+{
+  "Employees": [
+    { "name": "Ravi", "role": "Developer", "salary": 50000 },
+    { "name": "Sita", "role": "Tester", "salary": 40000 },
+    { "name": "Ram", "role": "Manager", "salary": 70000 }
+  ]
+}

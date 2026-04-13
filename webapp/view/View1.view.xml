@@ -1,0 +1,46 @@
+<mvc:View
+    controllerName="project6.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page title="Different Lists">
+
+        <content>
+
+            <List headerText="Employee Roles" items="{/Employees}">
+                <StandardListItem 
+                    title="{name}" 
+                    description="{role}" />
+            </List>
+
+            <List headerText="Employee Salary (Clickable)" items="{/Employees}">
+                <StandardListItem 
+                    title="{name}" 
+                    description="{= '₹ ' + ${salary} }"
+                    type="Active"
+                    press="onPressItem"/>
+            </List>
+
+            <List 
+                headerText="Select Employees"
+                mode="MultiSelect"
+                items="{/Employees}">
+                <StandardListItem title="{name}" />
+            </List>
+
+            <List headerText="Full Details" items="{/Employees}">
+                <ObjectListItem 
+                    title="{name}" 
+                    number="{= '₹ ' + ${salary} }">
+
+                    <firstStatus>
+                        <ObjectStatus text="{role}" />
+                    </firstStatus>
+
+                </ObjectListItem>
+            </List>
+
+        </content>
+
+    </Page>
+</mvc:View>
